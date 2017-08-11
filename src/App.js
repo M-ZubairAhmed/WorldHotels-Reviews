@@ -1,14 +1,37 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Home from './scenes/Home.js';
+import Home from './scenes/Home';
 import LuxuryHotels from './scenes/luxuryHotels/LuxuryHotels';
 import SmallHotels from './scenes/smallHotels/SmallHotels';
 import TopHotels from './scenes/topHotels/TopHotels';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      data: ''
+    };
+  }
+
+  async componentDidMount() {
+    console.log('network call');
+    try {
+      const request = await fetch(
+        'https://h4lservices.restlet.net/v1/hotels?media=json'
+      );
+      if (request.ok) {
+        const response = await request.json();
+        console.log(response);
+        this.setState({
+          data: response
+        });
+      } else {
+        console.log('Server responded with message :-', request.status);
+      }
+    } catch (e) {
+      console.log('Error while requesting for JSON :-', e.message);
+    }
   }
 
   render() {
@@ -37,10 +60,23 @@ export default class App extends Component {
               </Nav>
             </Navbar.Collapse>
           </Navbar>
-          <Route exact={true} path="/" component={Home} />
-          <Route path="/luxuryHotels" component={LuxuryHotels} />
-          <Route path="/smallHotels" component={SmallHotels} />
-          <Route path="/topHotels" component={TopHotels} />
+          <Route
+            exact={true}
+            path="/"
+            render={() => <Home data={this.state.data} />}
+          />
+          <Route
+            path="/luxuryHotels"
+            render={() => <LuxuryHotels data={this.state.data} />}
+          />
+          <Route
+            path="/smallHotels"
+            render={() => <SmallHotels data={this.state.data} />}
+          />
+          <Route
+            path="/topHotels"
+            render={() => <TopHotels data={this.state.data} />}
+          />
         </div>
       </Router>
     );
