@@ -1,0 +1,25 @@
+.loader {
+  z-index: 999;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: visible;
+  border: 5px solid #d7ccc8; /* Light grey */
+  border-top: 5px solid #795548; /* Blue */
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
