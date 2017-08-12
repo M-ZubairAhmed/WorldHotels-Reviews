@@ -27,7 +27,7 @@ export default class Hotels extends Component {
     }
   };
 
-  body = () => {
+  viewIndividualRows = () => {
     if (this.props.data === '') {
       return <Loader />;
     } else {
@@ -49,7 +49,7 @@ export default class Hotels extends Component {
         </Row>
         <Row>
           <Col lg={6} md={6} sm={12} xs={12}>
-            {this.body()}
+            {this.viewIndividualRows()}
           </Col>
           <Col lg={6} md={6} sm={12} xs={12}>
             Map goes here
