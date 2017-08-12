@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Jumbotron, Grid, Row, Col } from 'react-bootstrap';
+import { Jumbotron, Grid, Row, Col, Image } from 'react-bootstrap';
+import './home.css';
 
 export default class Home extends Component {
   constructor(props) {
@@ -9,17 +10,14 @@ export default class Home extends Component {
   render() {
     return (
       <Grid>
-        <Jumbotron>
-          <h1>Hello, world!</h1>
-          <p>
-            This is a simple hero unit, a simple jumbotron-style component for
-            calling extra attention to featured content or information.
-          </p>
-          <p />
-        </Jumbotron>
         <Row>
-          <Col lg={12}>
-            <img src="./cover.jpg" alt="404 error user not found" />
+          <Col lg={12} md={12} sm={12} xs={12}>
+            <div className="containerBox">
+              <div className="text-box">
+                <p className="text-moto">Where will you travel next?</p>
+              </div>
+              <img className="coverImage" src="./cover.jpg" />
+            </div>
           </Col>
         </Row>
       </Grid>
