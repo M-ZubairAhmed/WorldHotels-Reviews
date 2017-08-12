@@ -3,7 +3,7 @@ import Loader from '../../components/loader/Loader';
 import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 import IndividualRow from '../../components/individualRow/IndividualRow';
 
-export default class LuxuryHotels extends Component {
+export default class Hotels extends Component {
   constructor(props) {
     super(props);
   }
@@ -13,7 +13,7 @@ export default class LuxuryHotels extends Component {
       return (
         <div>
           {this.props.data
-            .filter(datum => datum.category === 'Top Luxury Hotels - World')
+            .filter(datum => datum.category === this.props.hotelType)
             .map(filteredDatum =>
               <IndividualRow
                 key={filteredDatum.id}
@@ -43,7 +43,9 @@ export default class LuxuryHotels extends Component {
     return (
       <Grid>
         <Row>
-          <PageHeader>Luxury Hotels</PageHeader>
+          <PageHeader>
+            {this.props.hotelType}
+          </PageHeader>
         </Row>
         <Row>
           {this.body()}

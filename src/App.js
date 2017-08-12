@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './scenes/Home';
-import LuxuryHotels from './scenes/luxuryHotels/LuxuryHotels';
+import Hotels from './scenes/hotelsPage/Hotels';
 import SmallHotels from './scenes/smallHotels/SmallHotels';
 import TopHotels from './scenes/topHotels/TopHotels';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
@@ -67,15 +67,24 @@ export default class App extends Component {
           />
           <Route
             path="/luxuryHotels"
-            render={() => <LuxuryHotels data={this.state.data} />}
+            render={() =>
+              <Hotels
+                data={this.state.data}
+                hotelType="Top Luxury Hotels - World"
+              />}
           />
           <Route
             path="/smallHotels"
-            render={() => <SmallHotels data={this.state.data} />}
+            render={() =>
+              <Hotels
+                data={this.state.data}
+                hotelType="Top Small Hotels - World"
+              />}
           />
           <Route
             path="/topHotels"
-            render={() => <TopHotels data={this.state.data} />}
+            render={() =>
+              <Hotels data={this.state.data} hotelType="Top Hotels - World" />}
           />
         </div>
       </Router>
