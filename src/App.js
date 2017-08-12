@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import Home from './scenes/home/Home';
 import Hotels from './scenes/hotelsPage/Hotels';
-import SmallHotels from './scenes/smallHotels/SmallHotels';
-import TopHotels from './scenes/topHotels/TopHotels';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 export default class App extends Component {
   constructor(props) {
@@ -61,7 +59,7 @@ export default class App extends Component {
             </Navbar.Collapse>
           </Navbar>
           <Route
-            exact={true}
+            exact
             path="/"
             render={() => <Home data={this.state.data} />}
           />
