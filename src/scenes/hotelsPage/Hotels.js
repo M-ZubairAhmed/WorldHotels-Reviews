@@ -41,18 +41,15 @@ export default class Hotels extends Component {
 
   render() {
     return (
-      <Grid>
+      <Grid style={{ marginBottom: '100px' }}>
         <Row>
           <PageHeader>
             {this.props.hotelType}
           </PageHeader>
         </Row>
         <Row>
-          <Col lg={6} md={6} sm={12} xs={12}>
+          <Col lg={6} lgOffset={3} md={6} sm={12} xs={12}>
             {this.viewIndividualRows()}
-          </Col>
-          <Col lg={6} md={6} sm={12} xs={12}>
-            Map goes here
           </Col>
         </Row>
       </Grid>
