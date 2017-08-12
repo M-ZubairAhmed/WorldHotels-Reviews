@@ -48,7 +48,12 @@ export default class Hotels extends Component {
           </PageHeader>
         </Row>
         <Row>
-          {this.body()}
+          <Col lg={6} md={6} sm={12} xs={12}>
+            {this.body()}
+          </Col>
+          <Col lg={6} md={6} sm={12} xs={12}>
+            Map goes here
+          </Col>
         </Row>
       </Grid>
     );
