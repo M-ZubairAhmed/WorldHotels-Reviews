@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Home from './scenes/Home';
+import Home from './scenes/home/Home';
 import Hotels from './scenes/hotelsPage/Hotels';
 import SmallHotels from './scenes/smallHotels/SmallHotels';
 import TopHotels from './scenes/topHotels/TopHotels';
