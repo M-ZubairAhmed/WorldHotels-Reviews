@@ -3,7 +3,6 @@ import {
   Grid,
   Row,
   Col,
-  InputGroup,
   FormControl,
   Glyphicon,
   Button,
