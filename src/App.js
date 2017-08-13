@@ -13,14 +13,12 @@ export default class App extends Component {
   }
 
   async componentDidMount() {
-    console.log('network call');
     try {
       const request = await fetch(
         'https://h4lservices.restlet.net/v1/hotels?media=json'
       );
       if (request.ok) {
         const response = await request.json();
-        console.log(response);
         this.setState({
           data: response
         });

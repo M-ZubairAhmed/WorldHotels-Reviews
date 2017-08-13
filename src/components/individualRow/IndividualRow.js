@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import { Card, Icon, Button } from 'semantic-ui-react';
+import './individualRow.css';
 
 export default class IndividualRow extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div>
@@ -18,6 +15,8 @@ export default class IndividualRow extends Component {
             </Card.Content>
             <Card.Content extra>
               <Button
+                color="teal"
+                className="reviews-button"
                 size="large"
                 content="Reviews"
                 icon="quote right"

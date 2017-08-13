@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
+import { Grid, Row, Col } from 'react-bootstrap';
 import Loader from '../../components/loader/Loader';
-import { PageHeader, Grid, Row, Col } from 'react-bootstrap';
 import IndividualRow from '../../components/individualRow/IndividualRow';
+import './hotels.css';
 
 export default class Hotels extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   renderIndividualRows = () => {
     if (this.props.data !== '') {
       return (
@@ -41,11 +38,13 @@ export default class Hotels extends Component {
 
   render() {
     return (
-      <Grid style={{ marginBottom: '100px' }}>
+      <Grid className="main-grid">
         <Row>
-          <PageHeader>
-            {this.props.hotelType}
-          </PageHeader>
+          <Col>
+            <h1 className="hotels-header">
+              {this.props.hotelType}
+            </h1>
+          </Col>
         </Row>
         <Row>
           <Col lg={6} lgOffset={3} md={6} sm={12} xs={12}>
