@@ -1,0 +1,10 @@
+.notFound-container {
+  display: flex;
+  justify-content: center;
+}
+
+.notFound-img {
+  max-width: 350px;
+  height: auto;
+  display: inline-block;
+}
