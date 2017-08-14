@@ -1,7 +1,8 @@
 .headerHome-root {
   text-align: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: auto;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 10px;
@@ -28,6 +29,10 @@
 }
 
 .headerHome-moto {
+  font-size: 2.5em;
+  font-weight: bolder;
+  margin-left: 10px;
+  margin-right: 10px;
   color: #7c7c7c;
   text-align: center;
   padding-bottom: 40px;
