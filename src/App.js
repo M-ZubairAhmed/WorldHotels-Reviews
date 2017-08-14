@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 import Home from './scenes/home/Home';
 import Hotels from './scenes/hotelsPage/Hotels';
 
@@ -41,18 +42,18 @@ export default class App extends Component {
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav pullRight>
-                <NavItem eventKey={1}>
-                  <Link to="/">Home</Link>
-                </NavItem>
-                <NavItem eventKey={2}>
-                  <Link to="/topHotels">Top Hotels</Link>
-                </NavItem>
-                <NavItem eventKey={3}>
-                  <Link to="/luxuryHotels">Luxury Hotels</Link>
-                </NavItem>
-                <NavItem eventKey={4}>
-                  <Link to="/smallHotels">Small Hotels</Link>
-                </NavItem>
+                <LinkContainer exact to="/">
+                  <NavItem eventKey={1}>Home </NavItem>
+                </LinkContainer>
+                <LinkContainer to="/topHotels">
+                  <NavItem eventKey={2}>Top Hotels</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/luxuryHotels">
+                  <NavItem eventKey={3}>Luxury Hotels</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/smallHotels">
+                  <NavItem eventKey={4}>Small Hotels</NavItem>
+                </LinkContainer>
               </Nav>
             </Navbar.Collapse>
           </Navbar>
