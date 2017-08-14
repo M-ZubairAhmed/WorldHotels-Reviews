@@ -49,7 +49,7 @@ export default class Home extends Component {
             </Col>
           </Row>
         </Grid>
-        <ButtonHollow buttonText="View All Hotels" />
+        <ButtonHollow buttonText="View All Hotels" address="/all" />
       </div>
     );
   }

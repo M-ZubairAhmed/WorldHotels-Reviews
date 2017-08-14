@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom';
 import './buttonHollow.css';
 
-export default class ButtonHollow extends Component {
+class ButtonHollow extends Component {
   render() {
     return (
       <Grid>
@@ -17,7 +18,10 @@ export default class ButtonHollow extends Component {
             xs={10}
             xsOffset={1}
           >
-            <div className="buttonHollow-root">
+            <div
+              className="buttonHollow-root"
+              onClick={() => this.props.history.push(this.props.address)}
+            >
               {this.props.buttonText}
             </div>
           </Col>
@@ -26,3 +30,5 @@ export default class ButtonHollow extends Component {
     );
   }
 }
+
+export default withRouter(ButtonHollow);
