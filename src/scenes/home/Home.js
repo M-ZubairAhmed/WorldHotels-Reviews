@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, FormControl, Glyphicon } from 'react-bootstrap';
-import { Button } from 'semantic-ui-react';
+import { Grid, Row, Col } from 'react-bootstrap';
 import HeaderHome from './headerHome/HeaderHome';
-import Search from './headerHome/search/Search';
 import Poster from '../../components/poster/Poster.js';
 import ButtonHollow from '../../components/buttonHollow/ButtonHollow';
 import './home.css';
