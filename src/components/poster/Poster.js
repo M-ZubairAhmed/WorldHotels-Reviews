@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './poster.css';
+import Statistics from '../../components/statistics/Statistics';
 
 export default class Poster extends Component {
   render() {
@@ -10,7 +11,11 @@ export default class Poster extends Component {
           alt={this.props.hotelTypeTitle}
           src={this.props.hotelTypeImage}
         />
-        <h2>
+        <Statistics
+          data={this.props.data}
+          hotelIdentifier={this.props.hotelIdentifier}
+        />
+        <h2 className="poster-title">
           {this.props.hotelTypeTitle}
         </h2>
         <h5 className="poster-gist">

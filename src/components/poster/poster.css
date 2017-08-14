@@ -17,7 +17,15 @@
   border-radius: 10px 10px 0px 0px;
   height: auto;
 }
+
+.poster-title {
+  margin-top: 0px;
+  color: #7c7c7c;
+}
+
 .poster-gist {
+  margin-top: 20px;
+  margin-bottom: 0px;
   color: #7c7c7c;
 }
 .poster-viewButton {

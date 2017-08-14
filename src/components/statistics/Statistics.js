@@ -2,22 +2,19 @@ import React, { Component } from 'react';
 import './statistics.css';
 
 export default class Statistics extends Component {
-  calculateStatistics = hotelType => {
+  calculateStatistics = hotelIdentifier => {
     if (this.props.data !== '') {
-      return this.props.data.filter(datum => datum.category === hotelType)
+      return this.props.data.filter(datum => datum.category === hotelIdentifier)
         .length;
     }
   };
 
   render() {
     return (
-      <div className="root">
-        <h2 className="value">
-          {this.calculateStatistics(this.props.hotelType)}
+      <div className="statistics-root">
+        <h2 className="statistics-value">
+          {this.calculateStatistics(this.props.hotelIdentifier)}
         </h2>
-        <h4 className="type">
-          {this.props.hotelName.toUpperCase()}
-        </h4>
       </div>
     );
   }

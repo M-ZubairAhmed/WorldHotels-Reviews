@@ -8,7 +8,6 @@ import {
   Button
 } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom';
-import Statistics from '../../components/statistics/Statistics';
 import Poster from '../../components/poster/Poster.js';
 import './home.css';
 
@@ -44,29 +43,6 @@ class Home extends Component {
           </Row>
         </div>
         <Row>
-          <Col lg={4} md={4} sm={12} xs={12}>
-            <Statistics
-              hotelType="Top Hotels - World"
-              data={this.props.data}
-              hotelName="Top Hotels"
-            />
-          </Col>
-          <Col lg={4} md={4} sm={12} xs={12}>
-            <Statistics
-              hotelType="Top Luxury Hotels - World"
-              data={this.props.data}
-              hotelName="Luxury Hotels"
-            />
-          </Col>
-          <Col lg={4} md={4} sm={12} xs={12}>
-            <Statistics
-              hotelType="Top Small Hotels - World"
-              data={this.props.data}
-              hotelName="Small Hotels"
-            />
-          </Col>
-        </Row>
-        <Row>
           <Col>
             <h3 className="categories-title">
               <hr />Categories
@@ -80,6 +56,8 @@ class Home extends Component {
               hotelTypeTitle="Top Hotels"
               hotelTypeGist="Nothing but the best from the rest."
               hotelLink="/topHotels"
+              hotelIdentifier="Top Hotels - World"
+              data={this.props.data}
             />
           </Col>
           <Col className="card" lg={4} md={6} sm={12} xs={12}>
@@ -88,6 +66,8 @@ class Home extends Component {
               hotelTypeTitle="Luxurious Hotels"
               hotelTypeGist="Larger than life mansions."
               hotelLink="/luxuryHotels"
+              hotelIdentifier="Top Luxury Hotels - World"
+              data={this.props.data}
             />
           </Col>
           <Col className="card" lg={4} md={6} sm={12} xs={12}>
@@ -96,6 +76,8 @@ class Home extends Component {
               hotelTypeTitle="Small Hotels"
               hotelTypeGist="Small and cozy abodes away from home."
               hotelLink="/smallHotels"
+              hotelIdentifier="Top Small Hotels - World"
+              data={this.props.data}
             />
           </Col>
         </Row>
