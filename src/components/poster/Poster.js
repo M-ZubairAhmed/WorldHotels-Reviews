@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './poster.css';
 import Statistics from '../../components/statistics/Statistics';
+import { withRouter } from 'react-router-dom';
 
-export default class Poster extends Component {
+class Poster extends Component {
   render() {
     return (
-      <div className="poster-root" onClick={() => console.log('hello')}>
+      <div
+        className="poster-root"
+        onClick={() => this.props.history.push(this.props.address)}
+      >
         <img
           className="poster-image"
           alt={this.props.hotelTypeTitle}
@@ -28,3 +32,5 @@ export default class Poster extends Component {
     );
   }
 }
+
+export default withRouter(Poster);

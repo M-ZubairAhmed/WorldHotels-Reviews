@@ -22,7 +22,7 @@ export default class Home extends Component {
                 hotelTypeImage="./topH.jpg"
                 hotelTypeTitle="Top Hotels"
                 hotelTypeGist="Nothing but the best from the rest."
-                hotelLink="/topHotels"
+                address="/topHotels"
                 hotelIdentifier="Top Hotels - World"
                 data={this.props.data}
               />
@@ -32,7 +32,7 @@ export default class Home extends Component {
                 hotelTypeImage="./luxH.jpg"
                 hotelTypeTitle="Luxurious Hotels"
                 hotelTypeGist="Larger than life mansions."
-                hotelLink="/luxuryHotels"
+                address="/luxuryHotels"
                 hotelIdentifier="Top Luxury Hotels - World"
                 data={this.props.data}
               />
@@ -42,7 +42,7 @@ export default class Home extends Component {
                 hotelTypeImage="./smlH.jpg"
                 hotelTypeTitle="Small Hotels"
                 hotelTypeGist="Small and cozy abodes away from home."
-                hotelLink="/smallHotels"
+                address="/smallHotels"
                 hotelIdentifier="Top Small Hotels - World"
                 data={this.props.data}
               />
