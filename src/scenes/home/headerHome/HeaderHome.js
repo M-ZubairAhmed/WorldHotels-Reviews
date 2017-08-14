@@ -6,7 +6,16 @@ import './headerHome.css';
 export default class HeaderHome extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      searchKey: ''
+    };
   }
+
+  handleChange = event => {
+    this.setState({
+      searchKey: event.target.value
+    });
+  };
 
   render() {
     return (
@@ -23,6 +32,8 @@ export default class HeaderHome extends Component {
                 className="headerHome-search"
                 placeholder="Find hotels"
                 bsSize="large"
+                value={this.state.searchKey}
+                onChange={this.handleChange}
               />
             </Col>
           </Row>
