@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import Home from './scenes/home/Home';
@@ -37,14 +37,13 @@ export default class App extends Component {
         <div>
           <Navbar style={{ border: '0', marginBottom: '0px' }} collapseOnSelect>
             <Navbar.Header>
-              <Navbar.Brand>World Hotel reviews</Navbar.Brand>
+              <Link exact to="/">
+                <Navbar.Brand>World Hotel reviews</Navbar.Brand>
+              </Link>
               <Navbar.Toggle />
             </Navbar.Header>
             <Navbar.Collapse>
               <Nav pullRight>
-                <LinkContainer exact to="/">
-                  <NavItem eventKey={1}>Home </NavItem>
-                </LinkContainer>
                 <LinkContainer to="/topHotels">
                   <NavItem eventKey={2}>Top Hotels</NavItem>
                 </LinkContainer>
