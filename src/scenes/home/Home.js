@@ -48,7 +48,7 @@ class Home extends Component {
             </Col>
           </Row>
         </div>
-        <Row className="statistics-row">
+        <Row>
           <Col lg={4} md={4} sm={12} xs={12}>
             <Statistics
               hotelType="Top Hotels - World"
