@@ -82,6 +82,7 @@ export default class App extends Component {
             render={() =>
               <Hotels data={this.state.data} hotelType="Top Hotels - World" />}
           />
+          <Route path="/all" render={() => <Hotels data={this.state.data} />} />
         </div>
       </Router>
     );
