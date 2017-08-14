@@ -37,7 +37,7 @@ export default class App extends Component {
         <div>
           <Navbar style={{ border: '0', marginBottom: '0px' }} collapseOnSelect>
             <Navbar.Header>
-              <Link exact to="/">
+              <Link to="/">
                 <Navbar.Brand>World Hotel reviews</Navbar.Brand>
               </Link>
               <Navbar.Toggle />
