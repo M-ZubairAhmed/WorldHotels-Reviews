@@ -8,18 +8,12 @@ import {
   Button,
   PageHeader
 } from 'react-bootstrap';
-import { Image, Statistic, Card } from 'semantic-ui-react';
+import { Image, Card } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
+import Statistics from '../../components/statistics/Statistics';
 import './home.css';
 
 class Home extends Component {
-  calculateStatistics = hotelType => {
-    if (this.props.data !== '') {
-      return this.props.data.filter(datum => datum.category === hotelType)
-        .length;
-    }
-  };
-
   handleNavigationClicks = page => {
     this.props.history.push('/topHotels');
   };
@@ -55,26 +49,27 @@ class Home extends Component {
           </Row>
         </div>
         <Row className="statistics-row">
-          <Statistic.Group widths="three">
-            <Statistic>
-              <Statistic.Value>
-                {this.calculateStatistics('Top Hotels - World')}
-              </Statistic.Value>
-              <Statistic.Label>Top Hotels</Statistic.Label>
-            </Statistic>
-            <Statistic>
-              <Statistic.Value>
-                {this.calculateStatistics('Top Luxury Hotels - World')}
-              </Statistic.Value>
-              <Statistic.Label>Luxury Hotels</Statistic.Label>
-            </Statistic>
-            <Statistic>
-              <Statistic.Value>
-                {this.calculateStatistics('Top Small Hotels - World')}
-              </Statistic.Value>
-              <Statistic.Label>Small Hotels</Statistic.Label>
-            </Statistic>
-          </Statistic.Group>
+          <Col lg={4} md={4} sm={12} xs={12}>
+            <Statistics
+              hotelType="Top Hotels - World"
+              data={this.props.data}
+              hotelName="Top Hotels"
+            />
+          </Col>
+          <Col lg={4} md={4} sm={12} xs={12}>
+            <Statistics
+              hotelType="Top Luxury Hotels - World"
+              data={this.props.data}
+              hotelName="Luxury Hotels"
+            />
+          </Col>
+          <Col lg={4} md={4} sm={12} xs={12}>
+            <Statistics
+              hotelType="Top Small Hotels - World"
+              data={this.props.data}
+              hotelName="Small Hotels"
+            />
+          </Col>
         </Row>
         <Row>
           <Col>
