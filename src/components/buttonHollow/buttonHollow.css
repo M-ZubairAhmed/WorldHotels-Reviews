@@ -1,0 +1,16 @@
+.buttonHollow-root {
+  text-align: center;
+  box-shadow: 0px 0px 10px #888888;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  color: #7c7c7c;
+}
+
+.buttonHollow-root:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 30px #888888;
+}

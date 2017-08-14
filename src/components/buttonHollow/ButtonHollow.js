@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
+import './buttonHollow.css';
 
 export default class ButtonHollow extends Component {
   render() {
