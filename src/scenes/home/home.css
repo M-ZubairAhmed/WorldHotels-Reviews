@@ -9,8 +9,26 @@
   padding-top: 30px;
   padding-bottom: 30px;
   border-radius: 10px;
-  background-color: #60e5e5;
-  background-image: linear-gradient(19deg, #60e5e5 0%, #d8ff96 100%);
+  background-color: #f7f7f7;
+  background-image: -webkit-linear-gradient(
+    0deg,
+    #f7f7f7 2%,
+    #ccffd7 16%,
+    #e9e9e9 95%
+  );
+  background-image: -moz-linear-gradient(
+    0deg,
+    #f7f7f7 2%,
+    #ccffd7 16%,
+    #e9e9e9 95%
+  );
+  background-image: -o-linear-gradient(
+    0deg,
+    #f7f7f7 2%,
+    #ccffd7 16%,
+    #e9e9e9 95%
+  );
+  background-image: linear-gradient(0deg, #f7f7f7 2%, #ccffd7 16%, #e9e9e9 95%);
 }
 
 .text-moto {
