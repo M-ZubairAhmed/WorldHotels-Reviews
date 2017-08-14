@@ -17,6 +17,12 @@ export default class HeaderHome extends Component {
     });
   };
 
+  startSearch = () => {
+    if (this.state.searchKey.trim() !== '') {
+      console.log(this.state.searchKey);
+    }
+  };
+
   render() {
     return (
       <Grid>
@@ -43,6 +49,7 @@ export default class HeaderHome extends Component {
                 className="headerHome-search-button"
                 size="huge"
                 color="teal"
+                onClick={this.startSearch}
               >
                 <Glyphicon glyph="search" /> Search
               </Button>
