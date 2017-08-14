@@ -5,10 +5,8 @@ import {
   Col,
   FormControl,
   Glyphicon,
-  Button,
-  PageHeader
+  Button
 } from 'react-bootstrap';
-import { Image, Card } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import Statistics from '../../components/statistics/Statistics';
 import Poster from '../../components/poster/Poster.js';
@@ -75,46 +73,30 @@ class Home extends Component {
             </h3>
           </Col>
         </Row>
-        <Row style={{ textAlign: 'center' }}>
+        <Row>
           <Col className="card" lg={4} md={6} sm={12} xs={12}>
-            <Card onClick={() => this.props.history.push('/topHotels')}>
-              <Image src="./topH.jpg" />
-              <Card.Content>
-                <Card.Header>Top Hotels</Card.Header>
-                <Card.Description>
-                  Nothing but the best from the rest.
-                </Card.Description>
-              </Card.Content>
-              <Card.Content className="view-more" extra>
-                View All
-              </Card.Content>
-            </Card>
-          </Col>
-          <Col className="card" lg={4} xs={12}>
-            <Card onClick={() => this.props.history.push('/luxuryHotels')}>
-              <Image src="./luxH.jpg" />
-              <Card.Content>
-                <Card.Header>Luxurious Hotels</Card.Header>
-                <Card.Description>Larger than life mansions.</Card.Description>
-              </Card.Content>
-              <Card.Content className="view-more" extra>
-                View All
-              </Card.Content>
-            </Card>
+            <Poster
+              hotelTypeImage="./topH.jpg"
+              hotelTypeTitle="Top Hotels"
+              hotelTypeGist="Nothing but the best from the rest."
+              hotelLink="/topHotels"
+            />
           </Col>
           <Col className="card" lg={4} md={6} sm={12} xs={12}>
-            <Card onClick={() => this.props.history.push('/smallHotels')}>
-              <Image src="./smlH.jpg" />
-              <Card.Content>
-                <Card.Header>Small Hotels</Card.Header>
-                <Card.Description>
-                  Small and cozy abodes away from home.
-                </Card.Description>
-              </Card.Content>
-              <Card.Content className="view-more" extra>
-                View All
-              </Card.Content>
-            </Card>
+            <Poster
+              hotelTypeImage="./luxH.jpg"
+              hotelTypeTitle="Luxurious Hotels"
+              hotelTypeGist="Larger than life mansions."
+              hotelLink="/luxuryHotels"
+            />
+          </Col>
+          <Col className="card" lg={4} md={6} sm={12} xs={12}>
+            <Poster
+              hotelTypeImage="./smlH.jpg"
+              hotelTypeTitle="Small Hotels"
+              hotelTypeGist="Small and cozy abodes away from home."
+              hotelLink="/smallHotels"
+            />
           </Col>
         </Row>
       </Grid>

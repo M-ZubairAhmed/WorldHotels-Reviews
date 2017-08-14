@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import './poster.css';
 
 export default class Poster extends Component {
   render() {
     return (
-      <div>
-        <img src={this.props.hotelTypeImage} />
+      <div className="root-poster" onClick={() => console.log('hello')}>
+        <img
+          className="image"
+          alt={this.props.hotelTypeTitle}
+          src={this.props.hotelTypeImage}
+        />
         <h2>
           {this.props.hotelTypeTitle}
         </h2>

@@ -1,0 +1,16 @@
+.root-poster {
+  opacity: 1;
+  border-color: black;
+  border: 2px;
+  border-radius: 10px;
+  box-shadow: 00px 0px 5px #888888;
+}
+.root:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.image {
+  max-width: 300px;
+  width: 300px;
+  height: auto;
+}
