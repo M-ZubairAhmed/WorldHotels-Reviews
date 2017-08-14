@@ -34,7 +34,7 @@ export default class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar collapseOnSelect>
+          <Navbar style={{ border: '0', marginBottom: '0px' }} collapseOnSelect>
             <Navbar.Header>
               <Navbar.Brand>World Hotel reviews</Navbar.Brand>
               <Navbar.Toggle />
