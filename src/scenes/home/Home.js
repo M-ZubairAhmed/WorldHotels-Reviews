@@ -11,13 +11,10 @@ import {
 import { Image, Card } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 import Statistics from '../../components/statistics/Statistics';
+import Poster from '../../components/poster/Poster.js';
 import './home.css';
 
 class Home extends Component {
-  handleNavigationClicks = page => {
-    this.props.history.push('/topHotels');
-  };
-
   render() {
     return (
       <Grid className="main-home">
@@ -73,7 +70,9 @@ class Home extends Component {
         </Row>
         <Row>
           <Col>
-            <PageHeader style={{ textAlign: 'center' }}>Categories</PageHeader>
+            <h3 className="categories-title">
+              <hr />Categories
+            </h3>
           </Col>
         </Row>
         <Row style={{ textAlign: 'center' }}>

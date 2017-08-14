@@ -42,6 +42,14 @@
   margin-top: 30px;
   margin-bottom: 15px;
 }
+
+.categories-title {
+  text-align: center;
+  padding-top: 25px;
+  color: #7c7c7c;
+  padding-bottom: 25px;
+}
+
 .card {
   margin-bottom: 20px;
   text-align: center;

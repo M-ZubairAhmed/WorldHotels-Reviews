@@ -2,4 +2,13 @@
   text-align: center;
   margin-top: 50px;
   margin-bottom: 30px;
+  color: #7c7c7c;
+}
+
+.type {
+  color: #8c8c8c;
+}
+
+.value {
+  color: #7c7c7c;
 }
