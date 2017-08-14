@@ -7,20 +7,35 @@ import './hotels.css';
 export default class Hotels extends Component {
   renderIndividualRows = () => {
     if (this.props.data !== '') {
-      return (
-        <div>
-          {this.props.data
-            .filter(datum => datum.category === this.props.hotelType)
-            .map(filteredDatum =>
+      if (this.props.hotelType) {
+        return (
+          <div>
+            {this.props.data
+              .filter(datum => datum.category === this.props.hotelType)
+              .map(filteredDatum =>
+                <IndividualRow
+                  key={filteredDatum.id}
+                  name={filteredDatum.name}
+                  location={filteredDatum.location}
+                  link={filteredDatum.link}
+                />
+              )}
+          </div>
+        );
+      } else {
+        return (
+          <div>
+            {this.props.data.map(datum =>
               <IndividualRow
-                key={filteredDatum.id}
-                name={filteredDatum.name}
-                location={filteredDatum.location}
-                link={filteredDatum.link}
+                key={datum.id}
+                name={datum.name}
+                location={datum.location}
+                link={datum.link}
               />
             )}
-        </div>
-      );
+          </div>
+        );
+      }
     }
   };
 
@@ -42,7 +57,7 @@ export default class Hotels extends Component {
         <Row>
           <Col>
             <h1 className="hotels-header">
-              {this.props.hotelType}
+              {this.props.hotelType ? this.props.hotelType : 'All Hotels'}
             </h1>
           </Col>
         </Row>
