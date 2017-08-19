@@ -1,0 +1,13 @@
+{
+  "name": "WorldHotels-Reviews",
+  "description": "A hotel search and review web app",
+  "repository": "https://github.com/M-ZubairAhmed/WorldHotels-Reviews",
+  "logo": "https://worldhotels-revs.herokuapp.com/favicon.gif",
+  "keywords": [
+    "react",
+    "react-bootstrap",
+    "react-router",
+    "semantic-react",
+    "prettier"
+  ]
+}
